@@ -1,10 +1,16 @@
-Pipeline đã thực hiện:
-Thiết lập môi trường ảo Anaconda với Python 3.10 và cài đặt các thư viện cần thiết từ requirements_core.txt.
-Kiểm tra môi trường thành công với src/env_check.py, khởi tạo các tệp log và cấu hình hệ thống.
-Chạy chương trình src/hello_nlp.py để thực hiện một pipeline NLP đơn giản trên dữ liệu ngẫu nhiên, đạt độ chính xác (accuracy) và Macro F1 là 1.0.
-Vấn đề gặp phải và xử lý:
-Quá trình cài đặt thư viện diễn ra thuận lợi, không gặp lỗi xung đột phiên bản.
-Các thư viện quan trọng như PyTorch đã được cài đặt và kiểm tra thành công để sẵn sàng cho các bài Lab tiếp theo.
-Kết quả đạt được:
-Hoàn thành việc tạo các tệp minh chứng bắt buộc trong thư mục logs/ và results/.
-Hệ thống đã sẵn sàng để thực hiện các bài kiểm tra với pytest.
+# Lab0 — 1-page report (Hello NLP, random data)
+
+## Pipeline đã chạy
+- Thực hiện kiểm tra môi trường hệ thống bằng src/env_check.py.2
+Chạy pipeline NLP cơ bản qua src/hello_nlp.py: Sinh dữ liệu văn bản giả lập (ngẫu nhiên) → Trích xuất đặc trưng TF-IDF → Huấn luyện mô hình LogisticRegression → Đánh giá hiệu năng.3
+
+## Kết quả
+- Xem `results/lab0_metrics.json` (accuracy, macro-F1, confusion matrix).
+
+## Vấn đề gặp phải + cách xử lý (ví dụ)
+- Vấn đề: Không thể cài đặt thư viện PyTorch thông qua lệnh conda install như hướng dẫn mặc định.5
+-Cách xử lý: Chuyển sang sử dụng pip để cài đặt trực tiếp, giúp quá trình cài đặt diễn ra thành công và thư viện hoạt động ổn định trong môi trường csc4007-nlp.6
+
+## Ghi chú
+- Dữ liệu random chỉ dùng để kiểm tra quy trình thiết lập (setup), không dùng để đánh giá hay so sánh các mô hình thực tế.
+- Đã hoàn thành đầy đủ các tệp minh chứng và bài kiểm tra pytest theo yêu cầu.
